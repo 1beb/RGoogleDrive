@@ -9,7 +9,8 @@ Description: This package implements the `get` and `list` functionality from
     the Google Drive SDK. It is essentially just a wrapper for \link[httr]
 License: MIT
 Imports:
-    httr, XML
+    httr,
+    XML
 Collate:
     'drive.auth.r'
     'drive.file.r'

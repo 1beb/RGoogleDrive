@@ -16,8 +16,8 @@ drive.options.test <- function() {
   
   drive.app.not.set <- is.null(getOption("drive.app"))
   drive.secret.not.set <- is.null(getOption("drive.secret"))
-  if(drive.app.not.set) warning("drive.app not set in options, RGoogleDocs will not be able to authenticate.")
-  if(drive.secret.not.set) warning("drive.secret not set in options, RGoogleDocs will not be able to authenticate.")  
+  if(drive.app.not.set) warning("drive.app not set in options, RGoogleDrive will not be able to authenticate.")
+  if(drive.secret.not.set) warning("drive.secret not set in options, RGoogleDrive will not be able to authenticate.")  
 
   return(all.set)
 }
