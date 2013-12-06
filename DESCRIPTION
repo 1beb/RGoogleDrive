@@ -1,0 +1,18 @@
+Package: RGoogleDrive
+Type: Package
+Title: For listing and retrieving Google Drive documents from R
+Version: 1.0
+Date: 2013-12-02
+Author: Brandon Bertelsen
+Maintainer: Brandon Bertelsen <brandon@bertelsen.ca>
+Description: This package implements the `get` and `list` functionality from
+    the Google Drive SDK. It is essentially just a wrapper for \link[httr]
+License: MIT
+Imports:
+    httr, XML
+Collate:
+    'drive.auth.r'
+    'drive.file.r'
+    'drive.list.r'
+    'drive.options.test.r'
+    'package.r'
