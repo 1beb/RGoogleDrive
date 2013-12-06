@@ -21,3 +21,25 @@ The following options will need to be set before you can proceed to authenticati
 options(drive.app ="107...5.apps.googleusercontent.com")
 options(drive.secret = "YOUR_SECRET")
 ```
+
+## Basic Usage
+
+First, authenticate:
+
+```
+drive.auth()
+```
+
+Then, search for the file that you're interested in accessing by title, the library will provide you with guidance if more than one document is returned in your search: 
+
+```
+drive.list("My Document")
+```
+
+Once you know the exact title of the document you wish to download, you can specify the name and format of the content you wish to receive, for example:
+
+```
+drive.file("My Document",download.type="txt") # Returns flat text
+drive.file("My Spreadsheet",download.type="csv") # Returns a data.frame
+drive.file("My Document",download.type="html") # Returns GDocs HTML
+```
