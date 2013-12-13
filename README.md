@@ -1,6 +1,6 @@
 # RGoogleDrive
 
-This package is largely a wrapper for Hadley Wickham's 
+This R package is largely a wrapper for Hadley Wickham's 
 [httr](https://github.com/hadley/httr), built with the 
 specific intention of providing access to the 
 [Google Drive SDK](https://developers.google.com/drive/v2/reference/) 
@@ -22,11 +22,22 @@ options(drive.app ="107...5.apps.googleusercontent.com")
 options(drive.secret = "YOUR_SECRET")
 ```
 
+## Installation
+
+```
+library(devtools)
+install_github("RGoogleDrive","1beb") # install
+```
+
+
 ## Basic Usage
+
+
 
 First, authenticate:
 
 ```
+library(RGoogleDrive)
 drive.auth()
 ```
 
