@@ -16,7 +16,7 @@ drive.file <- function(title,download.type="txt") {
     file.listing$Link <- gsub("txt",download.type,file.listing$Link)
   }
 
-  response <- GET(file.listing$Link,getOption("drive.auth"))
+  response <- GET(file.listing$Link,config(token = getOption("drive.auth")))
   
   
   if(download.type == "html") { 
