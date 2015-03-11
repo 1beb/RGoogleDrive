@@ -42,13 +42,13 @@ drive.auth <- function(drive.app=NULL,drive.secret=NULL,drive.scope=NULL) {
     stop("Something went wrong, no credentials were returned")
   }
   
-  if("redirect_uri_mismatch" %in% cred) {
+  if("redirect_uri_mismatch" %in% ls(cred)) {
     stop("Please upgrade to the development version of httr. You can use the following to do so: `devtools::install_github(\"httr\")")
   }
   
-  google_sig <- sign_oauth2.0(cred$access_token)
+  # google_sig <- sign_oauth2.0(cred$access_token) # This is deprecated
   
-  options(drive.auth = google_sig)
+  options(drive.auth = cred)
   if(!is.null(getOption("drive.auth"))) {
     message("Authentication successful.")
   }

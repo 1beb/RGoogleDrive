@@ -20,7 +20,7 @@ drive.list <- function(search.term=NULL, show.titles=TRUE, download.type="txt") 
   
   raw.list <- GET(
     "https://www.googleapis.com/drive/v2/files?maxResults=100000", 
-    getOption("drive.auth")
+    config(token = getOption("drive.auth"))
   )
   
   parsed.list <- content(raw.list, as="parsed")
