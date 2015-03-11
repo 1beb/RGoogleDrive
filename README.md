@@ -29,10 +29,7 @@ library(devtools)
 install_github("RGoogleDrive","1beb") # install
 ```
 
-
 ## Basic Usage
-
-
 
 First, authenticate:
 
@@ -54,3 +51,7 @@ drive.file("My Document",download.type="txt") # Returns flat text
 drive.file("My Spreadsheet",download.type="csv") # Returns a data.frame
 drive.file("My Document",download.type="html") # Returns GDocs HTML
 ```
+
+## Contributers
+
+* https://github.com/noamross
